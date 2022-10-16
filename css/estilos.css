@@ -21,8 +21,11 @@ nav a:hover{
     background-color:darkgray;
 }   
 
+main{
+    margin-bottom: 15px;
+}
+
 footer {
-    margin-top: 1rem;
     background-color:  rgba(157, 169, 171, 0.9);
     text-align: center;
     padding: 20px;
@@ -211,7 +214,22 @@ footer {
     font-weight: bold;
 }
 
+#formulario__contacto{
+    margin: 15px;
+}
 
+.btn{
+    background-color: rgba(54, 170, 15, 0.8);
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(54, 170, 15);
+}
+
+.btn:active:focus{
+    background-color: rgba(54, 170, 15, 0.8);
+}
 
 @media (max-width: 900px) {
     #quienesSomos{
