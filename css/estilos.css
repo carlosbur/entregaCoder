@@ -8,19 +8,6 @@
 
 /* Elementos */
 
-a{
-    border-radius: 5px;
-    padding: 5px;
-    text-decoration: none;
-    color: #323232;
-    font-weight: 600;
-}
-
-nav a:hover{
-    color: whitesmoke;
-    background-color:darkgray;
-}   
-
 main{
     margin-bottom: 15px;
 }
@@ -38,13 +25,12 @@ footer {
 /* Clases */
 
 .header{
-    width: 100%;
     display: flex;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     align-items: center;    
     justify-content: space-between;
     top: 0;
-    position: sticky;
     background-color: rgba(157, 169, 171, 0.9);
     flex-wrap: wrap;
 }
@@ -53,15 +39,27 @@ footer {
     height: 80px;
 }
 
-.header__nav{    
-    list-style-type: none;
-    font-size: 18px;
-    height: 20px;
+.header__nav__listado{
+    display: none;
 }
 
-.header li {
-    display: inline-block;
-    padding-right: 20px;
+.header__nav a{
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: #323232;
+    font-weight: 600;
+}
+
+.header__nav a:hover{
+    color: whitesmoke;
+    background-color:darkgray;
+}   
+
+.dropdown-toggle::after{
+    border: 0px;
+    margin: 0;
+
 }
 
 
@@ -72,7 +70,7 @@ footer {
     text-align: center;
     font-size: 30px;
     top:79px;
-    position: sticky;
+
     background-color: white;
     padding: 10px 0;
 }
@@ -221,20 +219,36 @@ footer {
     margin: 15px;
 }
 
-.btn{
+#formulario__contacto__boton{
     background-color: rgba(54, 170, 15, 0.8);
     border: none;
 }
 
-.btn:hover{
+#formulario__contacto__boton:hover{
     background-color: rgb(54, 170, 15);
 }
 
-.btn:active:focus{
+#formulario__contacto__boton:active:focus{
     background-color: rgba(54, 170, 15, 0.8);
 }
 
-@media (max-width: 900px) {
+@media (min-width: 480px){
+
+    .header__nav__listado{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        list-style-type: none;
+        padding-right: 20px;
+        font-size: 18px;
+        flex-wrap: wrap;
+        height: 10px;
+    }
+
+    .dropdown{
+        display: none;
+    }
+
     #quienesSomos{
         display: flex;
         flex-wrap: wrap;
