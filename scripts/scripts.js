@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var menuBtn = $('#header__icono'),
+    var menuBtn = $('.header__nav__icono'),
         menu = $('.header__nav ul')
 
     menuBtn.click(function(){

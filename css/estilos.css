@@ -12,7 +12,7 @@ main{
     margin-bottom: 80px;
 }
 
-footer {
+footer{
     background-color:  rgba(157, 169, 171, 0.9);
     text-align: center;
     padding: 20px;
@@ -25,17 +25,17 @@ footer {
 /* Clases */
 
 .header{
-    display: flex;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
-    align-items: center;    
-    justify-content: space-between;
-    background-color: rgba(157, 169, 171, 0.9);
-    flex-wrap: wrap;
+    background-color: rgba(157, 169, 171, 0.9);    
 }
 
 .header__logo{
     height: 80px;
+    padding-bottom: 5px;
 }
 
 .header__nav ul{
@@ -44,7 +44,6 @@ footer {
 
 .header__nav ul.show{
     display: flex;
-    flex-direction: column;
     text-decoration: none;
     list-style-type: none;
     padding: 20px;
@@ -57,13 +56,12 @@ footer {
     padding: 10px;
 }
 
-#header__icono{
+.header__nav__icono{
     font-size: 20px;
     color: #323232;
     align-self: center;
     justify-self: center;
     font-size: 30px;
-    margin: 0 40px;
     cursor: pointer;
 }
 
@@ -100,12 +98,12 @@ footer {
     display: flex; 
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .container p{
-    width: 300px;
-    font-size: 20px;
+    width: 200px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     margin-top: 20px;
@@ -117,13 +115,13 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container__section__foto{
-    width: 350px;
-    height: 250px;
-    margin: 20px 10px 0px;
+    width: 250px;
+    height: 150px;
+    margin: 10px 10px 0px;
     box-shadow: 0px 0px 20px 10px rgba(148, 208, 167, 0.701);
 }
 
@@ -249,8 +247,15 @@ footer {
     background-color: rgba(54, 170, 15, 0.8);
 }
 
-@media (min-width: 480px){
+@media (min-width: 320px){
 
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
     .header__nav{
         display: flex;
         flex-direction: row;
@@ -259,6 +264,10 @@ footer {
         padding-right: 20px;
         font-size: 18px;
         flex-wrap: wrap;
+    }
+
+    .header__logo{
+        padding: 0;
     }
 
 
@@ -271,10 +280,47 @@ footer {
         font-size: 18px;
     }
     
-
-    #header__icono{
+    .header__nav__icono{
     display: none;
     }
+
+    .container{
+        display: flex; 
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    
+    .container p{
+        width: 300px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .container__section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+    }
+    
+    .container__section__foto{
+        width: 350px;
+        height: 250px;
+        margin: 20px 10px 0px;
+        box-shadow: 0px 0px 20px 10px rgba(148, 208, 167, 0.701);
+    }
+    
+    .container__section:hover{
+        scale: 1.1;
+        transition: .2s;
+    }
+    
+
 
 
     #quienesSomos{
