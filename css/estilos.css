@@ -9,7 +9,7 @@
 /* Elementos */
 
 main{
-    margin-bottom: 15px;
+    margin-bottom: 80px;
 }
 
 footer {
@@ -30,7 +30,6 @@ footer {
     height: 100%;
     align-items: center;    
     justify-content: space-between;
-    top: 0;
     background-color: rgba(157, 169, 171, 0.9);
     flex-wrap: wrap;
 }
@@ -39,8 +38,33 @@ footer {
     height: 80px;
 }
 
-.header__nav__listado{
+.header__nav ul{
     display: none;
+}
+
+.header__nav ul.show{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 20px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+.header li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#header__icono{
+    font-size: 20px;
+    color: #323232;
+    align-self: center;
+    justify-self: center;
+    font-size: 30px;
+    margin: 0 40px;
+    cursor: pointer;
 }
 
 .header__nav a{
@@ -56,13 +80,6 @@ footer {
     background-color:darkgray;
 }   
 
-.dropdown-toggle::after{
-    border: 0px;
-    margin: 0;
-
-}
-
-
 .titulo{
     margin: 20px 0 0 0;    
     color:rgba(54, 170, 15, 0.8);
@@ -70,7 +87,6 @@ footer {
     text-align: center;
     font-size: 30px;
     top:79px;
-
     background-color: white;
     padding: 10px 0;
 }
@@ -101,6 +117,7 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding: 20px;
 }
 
 .container__section__foto{
@@ -234,7 +251,7 @@ footer {
 
 @media (min-width: 480px){
 
-    .header__nav__listado{
+    .header__nav{
         display: flex;
         flex-direction: row;
         text-decoration: none;
@@ -242,12 +259,23 @@ footer {
         padding-right: 20px;
         font-size: 18px;
         flex-wrap: wrap;
-        height: 10px;
     }
 
-    .dropdown{
-        display: none;
+
+    .header__nav ul{
+        display: inline-block   ;
+        flex-direction: row;
+        text-decoration: none;
+        list-style-type: none;
+
+        font-size: 18px;
     }
+    
+
+    #header__icono{
+    display: none;
+    }
+
 
     #quienesSomos{
         display: flex;
