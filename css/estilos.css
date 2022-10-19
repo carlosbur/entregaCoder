@@ -122,6 +122,10 @@ body{
     margin-top: 20px;
 }
 
+.persona2{
+    background-color: rgba(157, 169, 171, 0.9);
+}
+
 .container__section{
     display: flex;
     flex-direction: column;
@@ -143,6 +147,13 @@ body{
     transition: .2s;
 }
 
+.slide {
+    padding: 50px 0;
+    max-width: 900px;
+}
+
+/* Ids */
+
 #quienesSomos{
     display: flex;
     flex-direction: column;
@@ -150,7 +161,6 @@ body{
     justify-content: center;
     margin-top: 20px;
 }
-
 
 #quienesSomos__grid{
     display: flex;
@@ -182,10 +192,6 @@ body{
     align-self: center;
     font-weight: 600;
     color: #323232;
-}
-
-.persona2{
-    background-color: rgba(157, 169, 171, 0.9);
 }
 
 #container__servicios{
@@ -237,13 +243,6 @@ body{
     font-size: 1rem;
 }
 
-
-
-.slide {
-    padding: 50px 0;
-    max-width: 900px;
-}
-
 #carousel__contenedor{
     display: flex;
     justify-content: center;
@@ -255,7 +254,6 @@ body{
     text-align: center;
     margin: 50px 0;
 }
-
 
 #formulario__contacto{
     margin: 15px;
@@ -346,17 +344,7 @@ body{
         scale: 1.1;
         transition: .2s;
     }
-    
 
-    #quienesSomos{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-areas: 
-            "persona1 persona2";
-        margin-top: 60px;
-    }
-    
     .persona1{
         grid-area: persona1;
     }
@@ -365,7 +353,16 @@ body{
         grid-area: persona2;
         background-color: rgba(157, 169, 171, .01);
     }
-    
+        
+    #quienesSomos{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas: 
+            "persona1 persona2";
+        margin-top: 60px;
+    }
+        
     #quienesSomos__grid{
         display: grid;
         height: 550px;
