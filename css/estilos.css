@@ -22,6 +22,12 @@ footer{
     width: 100%;
 }
 
+
+body{
+    background-color: rgba(157, 169, 171, 0.2);
+}
+
+
 /* Clases */
 
 .header{
@@ -42,11 +48,16 @@ footer{
     display: none;
 }
 
+
+.header__nav{
+    display: flex;
+    flex-direction: column;
+
+}
 .header__nav ul.show{
     display: flex;
     text-decoration: none;
     list-style-type: none;
-    padding: 20px;
     font-size: 18px;
     flex-wrap: wrap;
 }
@@ -131,51 +142,37 @@ footer{
 }
 
 #quienesSomos{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-template-areas: 
-        "persona1 persona2";
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.persona1{
-    grid-area: persona1;
-}
-
-.persona2{
-    grid-area: persona2;
-}
 
 #quienesSomos__grid{
-    display: grid;
-    height: 550px;
-    grid-template-areas: 
-        "texto ."
-        "texto foto"
-        ". foto"
-        ". nombre";
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 5px;
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
+    height: 100%;
+    padding: 20px 0;
+  
 }
 
 #quienesSomos__foto{
-    height: 25rem;
-    grid-area: foto;
-    align-self: flex-end;
-    justify-content: center;
+    height: 20rem;
+    padding: 20px;
+
 }
 
+#quienesSomos__foto:hover{
+    transform: rotateY(360deg);
+    transition: 1s;
+
+}
 #quienesSomos__texto{
-    grid-area: texto;
     width: 60%;
     height: 50%;
-    align-self: flex-start;
-    justify-self: flex-end;
-    font-weight: 600;
     color: #323232;
 }
 
@@ -186,39 +183,48 @@ footer{
     color: #323232;
 }
 
+.persona2{
+    background-color: rgba(157, 169, 171, 0.9);
+}
+
 #container__servicios{
     display: flex;
-    height: 700px;
-    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 0 60;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 #container__serviciosVerde{
     display: flex;
-    height: 700px;
-    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 0 60;
+    margin: 20px 0;
     background-color: rgba(54, 170, 15, 0.2);
+    flex-wrap: wrap;
 }
 
 #container__servicios__foto{
-    height: 90%;
-    min-width: 800px;
-    width: 100%;
-
+    max-width: 400px;
+    max-height: 200px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 #container__servicios__descripcion{
     display: flex;
     flex-direction: column;
     color:#323232;
-    width: 600px;
+    width: 80%;
     align-items: center;
-    padding: 50px;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 #container__servicios__titulo{
@@ -226,9 +232,29 @@ footer{
 }
 
 #container__servicios__descripcion p{
-    margin-top: 40px;
-    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1rem;
 }
+
+
+
+.slide {
+    padding: 50px 0;
+    max-width: 900px;
+}
+
+#carousel__contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+
+#galeria__parrafo{
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
 
 #formulario__contacto{
     margin: 15px;
@@ -321,39 +347,102 @@ footer{
     }
     
 
-
-
     #quienesSomos{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas: 
+            "persona1 persona2";
+        margin-top: 60px;
     }
+    
+    .persona1{
+        grid-area: persona1;
+    }
+    
+    .persona2{
+        grid-area: persona2;
+        background-color: rgba(157, 169, 171, .01);
+    }
+    
+    #quienesSomos__grid{
+        display: grid;
+        height: 550px;
+        grid-template-areas: 
+            "texto ."
+            "texto foto"
+            ". foto"
+            ". nombre";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 5px;
+        align-items: center;
+    }
+    
+    #quienesSomos__foto{
+        height: 25rem;
+        grid-area: foto;
+        align-self: flex-end;
+        justify-content: center;
+    }
+    
+    #quienesSomos__texto{
+        grid-area: texto;
+        width: 60%;
+        height: 50%;
+        align-self: flex-start;
+        justify-self: flex-end;
+        font-weight: 600;
+        color: #323232;
+    }
+    
+    #quienesSomos__nombre{
+        grid-area: nombre;
+        align-self: center;
+        font-weight: 600;
+        color: #323232;
+    }
+
     #container__servicios{
-        display: flex;
-        flex-wrap: wrap;
-        overflow: auto;
+        display: grid;
+        grid-template-areas: 
+            "servicios__foto servicios__descripcion";
+        align-items: center;
+        justify-items: center;
     }
+
     #container__serviciosVerde{
-        display: flex;
-        flex-wrap: wrap;
-        overflow: auto;
+        display: grid;
+        grid-template-areas: 
+            "servicios__descripcion servicios__foto";
+    }
+    
+    #container__servicios__foto{
+    max-width: 800px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+    grid-area: servicios__foto;
+    }
+
+    #container__servicios__descripcion{
+        grid-area: servicios__descripcion;
+        padding: 0;
+    }
+
+    #container__servicios__descripcion p{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    }
+
+    #galeria__parrafo{
+        margin: 0px;
     }
     
 }
 
 
 
-body{
-    background-color: rgba(157, 169, 171, 0.2);
-}
 
 
-
-.slide {
-    padding: 50px 0;
-}
-
-#galeria__parrafo{
-    font-size: 1.7rem;
-    text-align: center;
-    margin-bottom: 50px;
-}
