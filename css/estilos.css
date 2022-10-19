@@ -20,6 +20,7 @@ footer{
     bottom: 0;
     height: 10px;
     width: 100%;
+    box-sizing: content-box;
 }
 
 
@@ -46,6 +47,7 @@ body{
 
 .header__nav ul{
     display: none;
+    margin-bottom: 0;
 }
 
 
@@ -156,7 +158,6 @@ body{
     align-items: center;
     height: 100%;
     padding: 20px 0;
-  
 }
 
 #quienesSomos__foto{
